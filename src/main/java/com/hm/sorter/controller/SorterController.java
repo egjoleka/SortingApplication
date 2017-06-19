@@ -1,9 +1,6 @@
 package com.hm.sorter.controller;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
 import javax.ws.rs.BadRequestException;
 import javax.ws.rs.core.Response;
@@ -18,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.hm.sorter.dto.SortedNumbers;
 import com.hm.sorter.service.SorterService;
+import com.hm.sorter.utils.RequestValidator;
 
 @RestController
 @RequestMapping("/numbers")
@@ -40,13 +38,9 @@ public class SorterController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	public void sortNumbers(@RequestBody List<Integer> numbers) {
-		if(numbers == null) {
-			throw new BadRequestException("Not a valid entry");
-		}
-		if (numbers.stream().anyMatch(number -> number == null)) {
-			throw new BadRequestException("Not a valid entry");
-		};
+		RequestValidator.validateRequest(numbers);
 		logger.debug("Received a new sorting request");
 		numberSorterService.sortNumbers(numbers);
 	}
+
 }
