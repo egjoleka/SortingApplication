@@ -13,7 +13,7 @@ Sorting Application developed with Spring Boot
 
 5.Follow the UI
 
-#Screenshots
+# Screenshots
 
 <img width="1274" alt="screen shot 2017-06-19 at 21 33 56" src="https://user-images.githubusercontent.com/28834022/27302484-886bb69e-5537-11e7-9fef-d7629adbae8a.png">
 
