@@ -58,7 +58,7 @@ public class SorterServiceTest {
 		assertNotNull(sorterCaptor.getValue().getCreationDate());
 		assertNotNull(sorterCaptor.getValue().getSortingTimeInMilliseconds());
 		assertEquals("1", sorterCaptor.getValue().getSortedNumbers());
-		assertEquals(new Integer(1), sorterCaptor.getValue().getNumberOfSwaps());
+		assertEquals(new Integer(0), sorterCaptor.getValue().getNumberOfSwaps());
 		assertEquals("1",sorterCaptor.getValue().getUnsorterdNumbers());
 
 	}
@@ -94,7 +94,5 @@ public class SorterServiceTest {
 		assertEquals("100,-1",sorterCaptor.getValue().getUnsorterdNumbers());
 
 	}
-	
-	
 	
 }
