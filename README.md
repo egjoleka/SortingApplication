@@ -5,11 +5,9 @@ Sorting Application developed with Spring Boot
 
 1.Clone the project
 
-2.Run Gradle ecl or gradle build to fetch dependencies
+2.Import the application in eclipse/intelliJ and start it. The application will run on port 8090
 
-3.Import the application in eclipse and start start it. The application will run on port 8090
-
-4.Navigate to http://localhost:8090/#/start
+3.Navigate to http://localhost:8090/#/start
 
 5.Follow the UI
 
