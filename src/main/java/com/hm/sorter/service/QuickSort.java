@@ -51,8 +51,11 @@ public class QuickSort {
 	            // which is smaller than the pivot element then we exchange the
 	            // values.
 	            // As we are done we can increase i and j
-	            if (i <= j) {
+	            if (i < j) {
 	                exchange(i, j);
+	                i++;
+	                j--;
+	            } else if (i == j) {
 	                i++;
 	                j--;
 	            }
